@@ -6,7 +6,7 @@ import logging
 from decouple import config
 from fastapi import FastAPI
 from langchain_groq import ChatGroq
-from langchain_openai import ChatOpenAI
+#from langchain_openai import ChatOpenAI
 from langserve import add_routes
 from chains import get_translate_chain
 
@@ -17,7 +17,7 @@ logger = logging.getLogger("fastapi")
 # 2. Mensagens de log de exemplo
 logger.info('Iniciando o script apptranslate.py (log fora de qualquer evento).')
 
-os.environ['OPENAI_API_KEY'] = config('OPENAI_API_KEY')
+#os.environ['OPENAI_API_KEY'] = config('OPENAI_API_KEY')
 os.environ['GROQ_API_KEY'] = config('GROQ_API_KEY')
 
 # 3. Instância do FastAPI
@@ -45,7 +45,7 @@ def shutdown_event():
     logger.info("Evento de shutdown: API finalizando...")
 
 # Exemplo de modelos, se você desejar expô-los
-openai_model = ChatOpenAI(model='gpt-4o')
+#openai_model = ChatOpenAI(model='gpt-4o')
 groq_model = ChatGroq(model='llama-3.3-70b-versatile')
 
 # Rota customizada (chainstranslate)
