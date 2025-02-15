@@ -25,7 +25,9 @@ Este projeto disponibiliza um endpoint `/translate` para receber um objeto JSON 
 - **Python 3.10+**
 - **FastAPI**
 - **Uvicorn**
-- **OpenAI API Key**
+- **Python logging**
+- **langchain**
+- **langserve**
 - **Groq API Key**
 
 Todas as dependências estão listadas em [requirements.txt](./requirements.txt).
@@ -73,8 +75,16 @@ Substitua pelos valores reais das suas chaves de API.
 Exemplo de `POST /translate`:
 ```json
 {
-  "language": "en",
+  "language": "Inglês",
   "text": "Olá, mundo!"
+}
+
+```
+
+Output `translate`:
+```json
+{
+    "text": "Hello, World!"
 }
 ```
 
@@ -92,6 +102,6 @@ Exemplo de `POST /translate`:
 - **RK (Ricardo Kerr)**
 - **ML (Marcu Loreto)**
 
+---
 
 Esperamos que seja útil! Qualquer dúvida, abra uma [issue](https://github.com/SEU_USUARIO/API_POS/issues). 🚀
-
