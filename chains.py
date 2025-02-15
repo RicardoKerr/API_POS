@@ -7,7 +7,7 @@ from decouple import config
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_groq import ChatGroq
-from langchain_openai import ChatOpenAI
+#from langchain_openai import ChatOpenAI
 
 # Configurações de Log
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -18,7 +18,7 @@ logger.warning('Mensagem de alerta')
 logger.error('Mensagem de erro')
 logger.critical('Mensagem crítica')
 
-os.environ['OPENAI_API_KEY'] = config('OPENAI_API_KEY')
+#os.environ['OPENAI_API_KEY'] = config('OPENAI_API_KEY')
 os.environ['GROQ_API_KEY'] = config('GROQ_API_KEY')
 
 # Exemplo de modelos, se você desejar expô-los
